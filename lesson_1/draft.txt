@@ -1,0 +1,77 @@
+cout << "Размер top " << top.size() << endl;
+////////////////////////////////////////////////////////////////////////////////
+
+vector <pair<string, int>> top;
+top.reserve(N);
+int count = 0;
+cout<< "ВНИМАНИЕ! " << N << " самых часто повторяющихся слов:" << endl;
+for (it = mp.begin(); it != mp.end(); it++)
+    for(int i = 0; i < N; i++){
+        if(top.size() <= N){
+            top.emplace_back(it->first, it->second);
+            continue;
+        }
+    if()
+    }
+////////////////////////////////////////////////////////////////////////////////
+        top.reserve(N);
+        cout<< "ВНИМАНИЕ! " << N << " самых часто повторяющихся слов:" << endl;
+        for (it = mp.begin(); it != mp.end(); it++)
+            for(int i = 0; i < N; i++){
+                if(top.size() <= N){
+                    top.emplace_back(it->first, it->second);
+                    continue;
+                }
+            if()
+            }
+
+////////////////////////////////////////////////////////////////////////////////
+        pair<string,int> highest = *mp.rbegin();          // last element
+
+        map<string,int>::iterator itt = mp.begin();
+        do {
+            cout << itt->first << " => " << itt->second << '\n';
+        } while ( mp.value_comp()(*itt++, highest) );
+
+////////////////////////////////////////////////////////////////////////////////
+        map<string,int/*    top.reserve(N);
+        cout<< "ВНИМАНИЕ! " << N << " самых часто повторяющихся слов:" << endl;
+        for (it = mp.begin(); it != mp.end(); it++)
+            for(int i = 0; i < N; i++){
+                if(top.size() <= N){
+                    top.emplace_back(it->first, it->second);
+                    continue;
+                }
+            if()
+            }
+
+////////////////////////////////////////////////////////////////////////////////
+        pair<string,int> highest = *mp.rbegin();          // last element
+
+        map<string,int>::iterator itt = mp.begin();
+        do {
+            cout << itt->first << " => " << itt->second << '\n';
+        } while ( mp.value_comp()(*itt++, highest) );
+    */>::key_compare mycomp = mp.key_comp();
+        string highest = mp.rbegin()->first;     // key value of last element
+        map<string,int>::iterator itt = mp.begin();
+        do {
+            cout << itt->first << " => " << itt->second << '\n';
+        } while ( mycomp((*itt++).first, highest) );
+
+        cout << '\n';
+
+////////////////////////////////////////////////////////////////////////////////
+    //ВЫВОД НА ЭКРАН MAP
+        map <string, int> :: iterator it = mp.begin();
+        cout << "MAP, отсортированный по ключу: " << endl;
+        for (int i = 0; it != mp.end(); it++, i++) {  // выводим их
+            cout << i << ") Ключ " << it->first << ", значение " << it->second << endl;
+        }
+        
+////////////////////////////////////////////////////////////////////////////////
+    //ВЫВОД VECTOR<PAIR>
+        vector<pair<string, int>> :: iterator iv1 = poem.begin();
+        for(int i = 0; iv1 != poem.end(); iv1++, i++) {
+            cout << i << ")" << iv1->first << "  " << iv1->second << endl;
+        }
