@@ -3,8 +3,8 @@ CC = g++
 
 all: normal
 
-normal: sfml.o
-	$(CC) sfml.o -o graphics-1 $(SFML_FLAGS)
+normal: polygon.o
+	$(CC) polygon.o -o graphics-1 $(SFML_FLAGS)
 
 %.o: %.cpp
 	$(CC) $(CFLAGS) -c $<
